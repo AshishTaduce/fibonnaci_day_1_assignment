@@ -6,16 +6,19 @@ main() {
 List Fibonnaci = [0];
 int j =0;
 int k=0;
-int number;
+int number = 0;
 
 for (int i = 1; Fibonnaci.length <= 30; i++){
-    number = i + j + k;
-    if ( i > 1){
-      j++;
-       if  (i > 2)  {
-         k++;
-       }
+
+    if ( i > 1) {
+      j = i - 1;
+      number = number + j;
     }
+
+       if  (i > 2)  {
+         number = number + k;
+       }
+
     Fibonnaci.add(number);
   }
   print (Fibonnaci);
